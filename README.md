@@ -7,6 +7,8 @@ A minimal clone of Google's Gemini AI built using React + Vite, powered by the *
 - Prompt history sidebar
 - Full responsive UI
 
+![Chat](public/Gemini%20Clone%20Screenshot.png)
+
 ## To use
 
 ### 1. Clone the repo
