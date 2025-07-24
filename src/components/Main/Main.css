@@ -9,8 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 22px;
-    padding: 20px;
+    font-size: 20px;
+    padding: 18px;
     color: #585858;
 }
 
@@ -25,11 +25,11 @@
 }
 
 .main .greet {
-    margin: 20px 0px;
-    font-size: 52px;
+    margin: 10px 0px;
+    font-size: 44px;
     color: #C4C7C5;
     font-weight: 500;
-    padding: 20px;
+    padding: 14px;
 }
 
 .main .greet span {
@@ -46,7 +46,7 @@
 }
 
 .main .card {
-    height: 200px;
+    height: 190px;
     padding: 15px;
     background-color: #F0F4F9;
     border-radius: 10px;
@@ -71,4 +71,53 @@
 
 .main .card:hover {
     background-color: #DFE4EA;
+}
+
+.main-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #F0F4F9;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.search-box img {
+    width: 24px;
+    cursor: pointer;
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+}
+ 
+.search-box div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.main .bottom-info {
+    font-size: 13px;
+    margin: 8px auto;
+    text-align: center;
+    font-weight: 300;
 }

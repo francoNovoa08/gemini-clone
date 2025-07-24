@@ -32,6 +32,19 @@ const Main = () => {
                     <img src={assets.code_icon} alt="Explore" />
                 </div>
             </div>
+            <div className="main-bottom">
+                <div className="search-box">
+                    <input type="text" placeholder="Enter a prompt here 🥵" />
+                    <div>
+                        <img src={assets.gallery_icon} alt="Upload Image" />
+                        <img src={assets.mic_icon} alt="Record Audio" />
+                        <img src={assets.send_icon} alt="Send prompt" />
+                    </div>
+                </div>
+                <p className="bottom-info">
+                    Gemini may display wildy inaccurate information and has the tendency to hallucinate dumb responses. 
+                </p>
+            </div>
         </div>
     </div>
   )
