@@ -12,7 +12,7 @@ A minimal clone of Google's Gemini AI built using React + Vite, powered by the *
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/babys-first-gemini.git
+git clone https://github.com/francoNovoa08/gemini-clone.git
 cd babys-first-gemini
 ```
 
