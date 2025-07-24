@@ -1,4 +1,4 @@
-const apiKey = "API_KEY_HERE"; // Replace with your actual API key
+const apiKey = "YOUR_API_KEY"; // Replace with your actual API key
 
 // To run this code you need to install the following dependencies:
 // npm install @google/genai mime
@@ -43,9 +43,14 @@ async function runChat(prompt) {
     contents,
   });
   let fileIndex = 0;
+  let finalResponse = '';
   for await (const chunk of response) {
+    if (chunk.text) {
+      finalResponse += chunk.text;
+    }
     console.log(chunk.text);
   }
+  return finalResponse;
 }
 
 export default runChat;

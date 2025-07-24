@@ -14,6 +14,9 @@ const Main = () => {
         <img src={assets.user_icon} alt="User" />
       </div>
       <div className="main-container">
+        
+        {!showResult 
+        ?<>
         <div className="greet">
           <p>
             <span>Hello, arbitrary User</span>
@@ -37,7 +40,20 @@ const Main = () => {
             <p>Compare React and Angular in brainrot terms</p>
             <img src={assets.code_icon} alt="Explore" />
           </div>
+        </div>  
+        </> 
+        :
+        <div className="result">
+            <div className="result-title">
+                <img src={assets.user_icon} alt="User" />
+                <p>{recentPrompt}</p>
+            </div>
+            <div className="result-data">
+                <img src={assets.gemini_icon} alt="Gemini" />
+                <p dangerouslySetInnerHTML={{__html: result}}></p>
+            </div>
         </div>
+        }
         <div className="main-bottom">
           <div className="search-box">
             <input onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder="Enter a prompt here 🥵" />

@@ -13,7 +13,16 @@ const ContextProvider = (props) => {
     const [result, setResult] = useState("");
     
     const onSent = async (prompt) => {
-        await runChat(input);
+        setResult("");
+        setLoading(true);
+        setShowResult(true);
+        setRecentPrompt(input);
+
+        const response = await runChat(input);
+
+        setResult(response);
+        setLoading(false);
+        setInput("");
     }
     
     const contextValue = {
