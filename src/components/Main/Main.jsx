@@ -75,7 +75,7 @@ const Main = () => {
               <img src={assets.gallery_icon} alt="Upload Image" />
               <img src={assets.mic_icon} alt="Record Audio" />
               <img
-                onClick={() => onSent(input)}
+                onClick={() => onSent()}
                 src={assets.send_icon}
                 alt="Send prompt"
               />

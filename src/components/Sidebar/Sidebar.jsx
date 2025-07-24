@@ -7,6 +7,11 @@ const Sidebar = () => {
   const [extended, setExtended] = React.useState(false);
   const { onSent, previousPrompts, setRecentPrompt } = useContext(Context);
 
+  const loadPrompt = async (prompt) => {
+    setRecentPrompt(prompt);
+    await onSent(prompt);
+  }
+
   return (
     <div className={`sidebar ${extended ? "expanded" : "collapsed"}`}>
       <div className="top">
@@ -25,7 +30,7 @@ const Sidebar = () => {
             <p className="recent-title">Recent</p>
             {previousPrompts.map((item, index) => {
               return (
-                <div className="recent-entry">
+                <div onClick={() => loadPrompt(item)} className="recent-entry">
                   <img src={assets.message_icon} alt="Message Icon" />
                   <p>{item.slice(0, 13)} ...</p>
                 </div>
