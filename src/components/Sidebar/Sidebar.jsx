@@ -6,9 +6,14 @@ const Sidebar = () => {
   const [extended, setExtended] = React.useState(false);
 
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${extended ? "expanded" : "collapsed"}`}>
       <div className="top">
-        <img onClick={() => setExtended(!extended)} className="menu" src={assets.menu_icon} alt="Menu" />
+        <img 
+            onClick={() => setExtended(!extended)} 
+            className={`menu ${extended ? "rotated" : ""}`} 
+            src={assets.menu_icon} 
+            alt="Menu" 
+        />
         <div className="new-chat">
           <img src={assets.plus_icon} alt="Plus Icon" />
           {extended ? <p>New Chat</p> : null}
