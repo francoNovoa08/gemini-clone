@@ -74,11 +74,13 @@ const Main = () => {
             <div>
               <img src={assets.gallery_icon} alt="Upload Image" />
               <img src={assets.mic_icon} alt="Record Audio" />
-              <img
-                onClick={() => onSent()}
-                src={assets.send_icon}
-                alt="Send prompt"
-              />
+              {input ? (
+                <img
+                  onClick={() => onSent()}
+                  src={assets.send_icon}
+                  alt="Send prompt"
+                />
+              ) : null}
             </div>
           </div>
           <p className="bottom-info">
