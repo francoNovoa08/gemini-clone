@@ -15,12 +15,23 @@ const Sidebar = () => {
                     <p className="recent-title">Recent</p>
                     <div className="recent-entry">
                         <img src={assets.message_icon} alt="Message Icon" />
-                        <p>Sample query </p>
+                        <p>Sample query... </p>
                     </div>
                 </div>
             </div>
             <div className="bottom">
-
+                <div className="bottom-item recent-entry">
+                    <img src={assets.question_icon} alt="Question" />
+                    <p>Help</p>
+                </div>
+                <div className="bottom-item recent-entry">
+                    <img src={assets.history_icon} alt="History" />
+                    <p>Activity</p>
+                </div>
+                <div className="bottom-item recent-entry">
+                    <img src={assets.settings_icon} alt="Settings" />
+                    <p>Settings</p>
+                </div>
             </div>
         </div>
     );
